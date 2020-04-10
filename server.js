@@ -21,6 +21,7 @@ const users = []
 
 app.set('view-engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
+app.use(express.static(__dirname))
 app.use(flash())
 app.use(session({
   secret: process.env.SESSION_SECRET,
